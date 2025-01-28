@@ -1,11 +1,11 @@
 <h1 align="center">Introdução JPA e Hibernate (com Maven e MySQL)</h1>
 
 <h2>Sumário</h2>
-- [O que você vai aprender](#O-que-você-vai-aprender)
-- [Pré-requisitos](#Pré-requisitos)
-- [Visão geral sobre mapeamento objeto-relacional](#Visão-geral-sobre-mapeamento-objeto-relacional)
-- [JPA](#JPA)
-- [Criando uma aplicação simples](#Criando-uma-aplicação-simples)
+- O que você vai aprender
+- Pré-requisitos](#Pré-requisitos
+- Visão geral sobre mapeamento objeto-relacional
+- JPA
+- Criando uma aplicação simples
 
 <h2>O que você vai aprender</h2>
 - Visão geral sobre mapeamento objeto-relacional
