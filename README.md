@@ -19,7 +19,7 @@
 
 ## Visão geral sobre mapeamento objeto-relacional
 
-![myImage](https://github.com/devsuperior/aulao006/raw/master/img-problema-orm.png)
+![img-problema-orm](src/main/resources/image/img-problema-orm.png)
 
 ### Outros problemas que devem ser tratados:
 - Contexto de persistência (objetos que estão ou não atrelados a uma conexão em um dado momento)
@@ -38,7 +38,7 @@ Para trabalhar com JPA é preciso incluir no projeto uma implementação da API 
 
 Arquitetura de uma aplicação que utiliza JPA:
 
-![myImage](https://github.com/devsuperior/aulao006/raw/master/img-arquitetura-jpa.png)
+![img-arquitetura-jpa](src/main/resources/image/img-arquitetura-jpa.png)
 
 ### Principais classes:
 
@@ -58,7 +58,7 @@ Escopo: tipicamente mantem-se uma instância única de EntityManagerFactory para
 
 ## Criando uma aplicação simples
 
-![myImage](https://github.com/devsuperior/aulao006/raw/master/img-pessoa.png)
+![img-pessoa](src/main/resources/image/img-pessoa.png)
 
 ### Passos
 
