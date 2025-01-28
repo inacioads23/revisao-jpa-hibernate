@@ -1,18 +1,5 @@
 # Introdução JPA e Hibernate (com Maven e MySQL)
 
-**Comunidade no Discord**:
-https://discord.gg/SbjpsFv
-
-Não perca as novidades:
-- https://instagram.com/devsuperior.ig
-- https://facebook.com/devsuperior.fb
-- https://youtube.com/devsuperior
-- https://twitter.com/devsuperior
-
-Assista o vídeo desta aula:
-
-[![Image](https://img.youtube.com/vi/CAP1IPgeJkw/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/CAP1IPgeJkw)
-
 ## Sumário
 - [O que você vai aprender](#O-que-você-vai-aprender)
 - [Pré-requisitos](#Pré-requisitos)
