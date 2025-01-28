@@ -1,33 +1,46 @@
-<h1 align="center">Introdução JPA e Hibernate (com Maven e MySQL)</h1>
+# Introdução JPA e Hibernate (com Maven e MySQL)
 
-<h2>Sumário</h2>
-- O que você vai aprender<br/>
-- Pré-requisitos<br/>
-- Visão geral sobre mapeamento objeto-relacional<br/>
-- JPA<br/>
-- Criando uma aplicação simples
+**Comunidade no Discord**:
+https://discord.gg/SbjpsFv
 
-<h2>O que você vai aprender</h2>
+Não perca as novidades:
+- https://instagram.com/devsuperior.ig
+- https://facebook.com/devsuperior.fb
+- https://youtube.com/devsuperior
+- https://twitter.com/devsuperior
+
+Assista o vídeo desta aula:
+
+[![Image](https://img.youtube.com/vi/CAP1IPgeJkw/mqdefault.jpg "Vídeo no Youtube")](https://youtu.be/CAP1IPgeJkw)
+
+## Sumário
+- [O que você vai aprender](#O-que-você-vai-aprender)
+- [Pré-requisitos](#Pré-requisitos)
+- [Visão geral sobre mapeamento objeto-relacional](#Visão-geral-sobre-mapeamento-objeto-relacional)
+- [JPA](#JPA)
+- [Criando uma aplicação simples](#Criando-uma-aplicação-simples)
+
+## O que você vai aprender
 - Visão geral sobre mapeamento objeto-relacional
 - Introdução ao JPA - Java Persistence API
 
-<h2>Pré-requisitos</h2>
+## Pré-requisitos
 
 - Lógica de programação
 - OO básica
 - BD básico
 
-<h2>Visão geral sobre mapeamento objeto-relacional</h2>
+## Visão geral sobre mapeamento objeto-relacional
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-problema-orm.png)
 
-<h3>Outros problemas que devem ser tratados:</h3>
+### Outros problemas que devem ser tratados:
 - Contexto de persistência (objetos que estão ou não atrelados a uma conexão em um dado momento)
 - Mapa de identidade (cache de objetos já carregados)
 - Carregamento tardio (lazy loading)
 - Outros
 
-<h2>JPA</h2>
+## JPA
 
 Java Persistence API (JPA) é a especificação padrão da plataforma Java EE (pacote javax.persistence) para mapeamento objeto-relacional e persistência de dados.
 
@@ -40,41 +53,41 @@ Arquitetura de uma aplicação que utiliza JPA:
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-arquitetura-jpa.png)
 
-<h3>Principais classes:</h3>
+### Principais classes:
 
-<h3>EntityManager</h3>
+#### EntityManager
 https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html
 
 Um objeto EntityManager encapsula uma conexão com a base de dados e serve para efetuar operações de acesso a dados (inserção, remoção, deleção, atualização) em entidades (clientes, produtos, pedidos, etc.) por ele monitoradas em um mesmo contexto de persistência.
 
 Escopo: tipicamente mantem-se uma instância única de EntityManager para cada thread do sistema (no caso de aplicações web, para cada requisição ao sistema). 
 
-<h3>EntityManagerFactory</h3>
+#### EntityManagerFactory
 https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManagerFactory.html
 
 Um objeto EntityManagerFactory é utilizado para instanciar objetos EntityManager.
 
 Escopo: tipicamente mantem-se uma instância única de EntityManagerFactory para toda aplicação.
 
-<h2>Criando uma aplicação simples</h2>
+## Criando uma aplicação simples
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-pessoa.png)
 
-<h3>Passos</h3>
+### Passos
 
-<h3>Crie uma base de dados MySQL vazia</h3>
+#### Crie uma base de dados MySQL vazia
 - Instale o Xampp no seu computador
 - Inicie o Apache e o MySQL
 - No PhpMyAdmin, crie uma base de dados chamada "aulajpa"
 
-<h3>Crie um novo projeto Maven</h3>
+#### Crie um novo projeto Maven
 - File -> New -> Other -> Maven Project
 - Create Simple Project -> Next
   - Group Id: com.educandoweb
   - Artifact Id: aulajpamaven
   -Finish
 
-<h3>Copie as classes Programa e Pessoa para o novo projeto</h3>
+#### Copie as classes Programa e Pessoa para o novo projeto
 
 ```java
 package dominio;
@@ -148,7 +161,7 @@ public class Programa {
 }
 ```
 
-<h3>Atualize o Maven do projeto para Java 11</h3>
+#### Atualize o Maven do projeto para Java 11
 - Edite o arquivo pom.xml
 - Inclua o conteúdo abaixo
 - Salve o projeto
@@ -161,7 +174,7 @@ public class Programa {
 </properties>
 ```
 
-<h3>Inclua as dependências Maven a serem baixadas:</h3>
+#### Inclua as dependências Maven a serem baixadas:
 
 ```xml
 <dependencies>
@@ -188,7 +201,7 @@ public class Programa {
 </dependencies>
 ```
 
-<h3>Configure o JPA no seu projeto por meio do arquivo persistence.xml</h3>
+#### Configure o JPA no seu projeto por meio do arquivo persistence.xml
 - Crie uma pasta "META-INF" a partir da pasta "resources"
 - Dentro da pasta META-INF crie um arquivo "persistence.xml"
 - Conteúdo do arquivo persistence.xml:
@@ -219,7 +232,7 @@ public class Programa {
 </persistence>
 ```
 
-<h3>Inclua os MAPEAMENTOS na classe de domínio:</h3>
+#### Inclua os MAPEAMENTOS na classe de domínio:
 
 ```java
 package dominio;
@@ -236,5 +249,4 @@ public class Pessoa implements Serializable {
 	(...)
 ```
 
-<h3>Na classe "Programa" faça os testes (veja vídeo-aula).</h3>
-
+#### Na classe "Programa" faça os testes (veja vídeo-aula).
