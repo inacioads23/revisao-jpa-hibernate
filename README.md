@@ -236,5 +236,5 @@ public class Pessoa implements Serializable {
 	(...)
 ```
 
-#### Na classe "Programa" faça os testes (veja vídeo-aula).
+#### Na classe "Programa" faça os testes (veja vídeo-aula).<br/>
 https://youtu.be/CAP1IPgeJkw
