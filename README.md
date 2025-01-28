@@ -1,13 +1,13 @@
 # Introdução JPA e Hibernate (com Maven e MySQL)
 
 ## Sumário
-- [O que você vai aprender](#O-que-você-vai-aprender)
+- [Assuntos a serem tratados](#Assuntos-a-serem-tratados)
 - [Pré-requisitos](#Pré-requisitos)
 - [Visão geral sobre mapeamento objeto-relacional](#Visão-geral-sobre-mapeamento-objeto-relacional)
 - [JPA](#JPA)
 - [Criando uma aplicação simples](#Criando-uma-aplicação-simples)
 
-## O que você vai aprender
+## Assuntos a serem tratados
 - Visão geral sobre mapeamento objeto-relacional
 - Introdução ao JPA - Java Persistence API
 
