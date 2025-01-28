@@ -1,34 +1,33 @@
 <h1 align="center">Introdução JPA e Hibernate (com Maven e MySQL)</h1>
-# Introdução JPA e Hibernate (com Maven e MySQL)
 
-## Sumário
+<h2>Sumário</h2>
 - [O que você vai aprender](#O-que-você-vai-aprender)
 - [Pré-requisitos](#Pré-requisitos)
 - [Visão geral sobre mapeamento objeto-relacional](#Visão-geral-sobre-mapeamento-objeto-relacional)
 - [JPA](#JPA)
 - [Criando uma aplicação simples](#Criando-uma-aplicação-simples)
 
-## O que você vai aprender
+<h2>O que você vai aprender</h2>
 - Visão geral sobre mapeamento objeto-relacional
 - Introdução ao JPA - Java Persistence API
 
-## Pré-requisitos
+<h2>Pré-requisitos</h2>
 
 - Lógica de programação
 - OO básica
 - BD básico
 
-## Visão geral sobre mapeamento objeto-relacional
+<h2>Visão geral sobre mapeamento objeto-relacional</h2>
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-problema-orm.png)
 
-### Outros problemas que devem ser tratados:
+<h3>Outros problemas que devem ser tratados:</h3>
 - Contexto de persistência (objetos que estão ou não atrelados a uma conexão em um dado momento)
 - Mapa de identidade (cache de objetos já carregados)
 - Carregamento tardio (lazy loading)
 - Outros
 
-## JPA
+<h2>JPA</h2>
 
 Java Persistence API (JPA) é a especificação padrão da plataforma Java EE (pacote javax.persistence) para mapeamento objeto-relacional e persistência de dados.
 
@@ -41,41 +40,41 @@ Arquitetura de uma aplicação que utiliza JPA:
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-arquitetura-jpa.png)
 
-### Principais classes:
+<h3>Principais classes:</h3>
 
-#### EntityManager
+<h3>EntityManager</h3>
 https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManager.html
 
 Um objeto EntityManager encapsula uma conexão com a base de dados e serve para efetuar operações de acesso a dados (inserção, remoção, deleção, atualização) em entidades (clientes, produtos, pedidos, etc.) por ele monitoradas em um mesmo contexto de persistência.
 
 Escopo: tipicamente mantem-se uma instância única de EntityManager para cada thread do sistema (no caso de aplicações web, para cada requisição ao sistema). 
 
-#### EntityManagerFactory
+<h3>EntityManagerFactory</h3>
 https://docs.oracle.com/javaee/7/api/javax/persistence/EntityManagerFactory.html
 
 Um objeto EntityManagerFactory é utilizado para instanciar objetos EntityManager.
 
 Escopo: tipicamente mantem-se uma instância única de EntityManagerFactory para toda aplicação.
 
-## Criando uma aplicação simples
+<h2>Criando uma aplicação simples</h2>
 
 ![myImage](https://github.com/devsuperior/aulao006/raw/master/img-pessoa.png)
 
-### Passos
+<h3>Passos</h3>
 
-#### Crie uma base de dados MySQL vazia
+<h3>Crie uma base de dados MySQL vazia</h3>
 - Instale o Xampp no seu computador
 - Inicie o Apache e o MySQL
 - No PhpMyAdmin, crie uma base de dados chamada "aulajpa"
 
-#### Crie um novo projeto Maven
+<h3>Crie um novo projeto Maven</h3>
 - File -> New -> Other -> Maven Project
 - Create Simple Project -> Next
   - Group Id: com.educandoweb
   - Artifact Id: aulajpamaven
   -Finish
 
-#### Copie as classes Programa e Pessoa para o novo projeto
+<h3>Copie as classes Programa e Pessoa para o novo projeto</h3>
 
 ```java
 package dominio;
@@ -149,7 +148,7 @@ public class Programa {
 }
 ```
 
-#### Atualize o Maven do projeto para Java 11
+<h3>Atualize o Maven do projeto para Java 11</h3>
 - Edite o arquivo pom.xml
 - Inclua o conteúdo abaixo
 - Salve o projeto
@@ -162,7 +161,7 @@ public class Programa {
 </properties>
 ```
 
-#### Inclua as dependências Maven a serem baixadas:
+<h3>Inclua as dependências Maven a serem baixadas:</h3>
 
 ```xml
 <dependencies>
@@ -189,7 +188,7 @@ public class Programa {
 </dependencies>
 ```
 
-#### Configure o JPA no seu projeto por meio do arquivo persistence.xml
+<h3>Configure o JPA no seu projeto por meio do arquivo persistence.xml</h3>
 - Crie uma pasta "META-INF" a partir da pasta "resources"
 - Dentro da pasta META-INF crie um arquivo "persistence.xml"
 - Conteúdo do arquivo persistence.xml:
@@ -220,7 +219,7 @@ public class Programa {
 </persistence>
 ```
 
-#### Inclua os MAPEAMENTOS na classe de domínio:
+<h3>Inclua os MAPEAMENTOS na classe de domínio:</h3>
 
 ```java
 package dominio;
@@ -237,4 +236,5 @@ public class Pessoa implements Serializable {
 	(...)
 ```
 
-#### Na classe "Programa" faça os testes (veja vídeo-aula).
+<h3>Na classe "Programa" faça os testes (veja vídeo-aula).</h3>
+
